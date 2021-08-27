@@ -1,12 +1,24 @@
-engenharia={'João'   :  9,
-       'Maria'  : 10,
-       'José'   : 4  }
+#"Pefume"
+print("="*30)
+print("\tSeja Bem vindo")
+print("="*30)
 
-nome = input("Digite o nome do aluno: ")
-nota = float(input("Nota dele: "))
+#cadastrando funcionario inicias
+funcionario_icev ={
+    'Euzebio': 96556, 
+    'Bruna'  : 10959,
+    'Arthur' : 46161  
+}
 
-if engenharia.get(nome):
-    print("Ja existe o aluno ",nome)
+#cadastrando funcionarios novos 
+funcionario_novo = input("Digite o nome do funcionario: ")
+codigo = float(input("Numero do Codigo de acesso: "))
+
+#verificando funcionarios adicionados 
+if funcionario_icev.get(funcionario_novo):
+    print("Ja existe um funcionario com esse usuario ",funcionario_novo)
 else:
-    engenharia[nome] = nota
-print(engenharia)
+    funcionario_icev[funcionario_novo] = codigo
+    
+#imprimindo funcionarios 
+print(funcionario_icev)
