@@ -1,9 +1,39 @@
-from index import grafico_1 as grafico_pizza
-from index import grafico_2 as graf_2
-from index import grafico_3 as graf_3
+from index import *
 
-grafico_pizza()
+print("=" * 25)
+print("\tBem Vindo")
+print("=" * 25)
+print("Escolha o grafico desejado abaixo")
 
-graf_2()
+opcao = True
 
-graf_3()
+while opcao : 
+    print("""
+    1.Grafico Pizza
+    2.Grafico Gantt
+    3.Grafico 3D
+    4.Grafico Linha
+    5.Grafico de Barra 
+    6.Sair
+    """)
+
+    opcao = input("Qual opção deseja? Digite um numero: ")
+    
+    if opcao == "1":
+        grafico_pizza()
+    elif opcao == "2":
+        grafico_gantt()
+    elif opcao == "3":
+        grafico_3d()
+    elif opcao == "4":
+        grafico_linha()
+    elif opcao == "5":
+        grafico_barra()
+    elif opcao == "6":
+        print("Até mais")
+        opcao = None
+
+    else:
+        print("Opção Invalida")
+
+

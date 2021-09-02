@@ -2,20 +2,26 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
 import numpy as np
 
-def grafico_1():  
-    dados= []
+def grafico_pizza():  
+    dados = [] 
+
+    plt.title("Gráfico Pizza")
+
+    #dados
     while len(dados) < 5:
         dados_d = input("Escreva um numero: ")
         if dados_d in dados:
             print("Nao pode escrever esse numero.")
         else:
             dados.append(dados_d)
-
+ 
     plt.pie(dados)
-    plt.savefig('grafico_gantt.png', transparent = True)#salvar grafico
+    plt.savefig('grafico_pizza.png', transparent = True)#salvar grafico
     plt.show()
 
-def grafico_2():
+def grafico_gantt():
+    plt.title("Gráfico Gant")
+    
     fig, gantt = plt.subplots() 
     gantt.set_ylim(0, 50) 
 
@@ -36,14 +42,38 @@ def grafico_2():
     plt.savefig('grafico_gantt.png', transparent = True)#salvar grafico
     plt . show ()
 
-def grafico_3():
+def grafico_3d():
+    plt.title("Gráfico 3D")
+    
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     
     dado_1, dado_2 ,dado_3 = axes3d.get_test_data(0.10)#implementando dados
     
-    ax.plot_wireframe( dado_1, dado_2 ,dado_3,rstride=20, cstride=20)
+    ax.plot_wireframe( dado_1, dado_2 ,dado_3,rstride = 30, cstride = 30)
     
     plt.style.use('ggplot')#mudar estilo
-    plt.savefig('grafico_gantt.png', transparent = True)#salvar grafico
+    plt.savefig('grafico_3d.png', transparent = True)#salvar grafico
+    plt.show()
+
+def grafico_linha():
+    #grafico linha
+    plt.title("Consumo de café por mes")
+
+    
+    plt.plot(x=[1,2,3,4,5,6],y=[3,2,4,7,9,10])
+    plt.ylabel("Meses")
+    plt.xlabel("Consumo")
+
+    plt.savefig('grafico_Linha.png', transparent = True)#salvar grafico
+    plt.show()
+
+def grafico_barra():
+    plt.title("Medias de meninas e meninos")
+
+    sexo = ["Meninos","Meninas"]
+    porcentagem = [45,55]
+
+    plt.bar(sexo,porcentagem)
+    plt.savefig('grafico_barra.png', transparent = True)#salvar grafico
     plt.show()
