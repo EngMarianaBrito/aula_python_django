@@ -4,6 +4,7 @@ import numpy as np
 
 def grafico_pizza():  
     dados = [] 
+    labels = ["dados1","dados2","dados3","dados4","dados5"]
 
     plt.title("Gráfico Pizza")
 
@@ -15,7 +16,8 @@ def grafico_pizza():
         else:
             dados.append(dados_d)
  
-    plt.pie(dados)
+    plt.pie(dados,labels=labels)
+    plt.legend(labels, loc=3)
     plt.savefig('grafico_pizza.png', transparent = True)#salvar grafico
     plt.show()
 
