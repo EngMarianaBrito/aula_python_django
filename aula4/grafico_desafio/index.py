@@ -61,8 +61,7 @@ def grafico_3d():
 def grafico_linha():
     #grafico linha
     plt.title("Consumo de café por mes")
-
-    
+   
     plt.plot(x=[1,2,3,4,5,6],y=[3,2,4,7,9,10])
     plt.ylabel("Meses")
     plt.xlabel("Consumo")
