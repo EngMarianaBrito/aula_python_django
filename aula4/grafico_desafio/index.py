@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import axes3d
 import numpy as np
+from mpl_toolkits.mplot3d import axes3d
 
 def grafico_pizza():  
     dados = [] 
@@ -12,7 +12,7 @@ def grafico_pizza():
     while len(dados) < 5:
         dados_d = input("Escreva um numero: ")
         if dados_d in dados:
-            print("Nao pode escrever esse numero.")
+            print("Digite outro numero: ")
         else:
             dados.append(dados_d)
  
